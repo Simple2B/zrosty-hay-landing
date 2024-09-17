@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    image: simple2b/zrosty-hay-landing:latest
+    restart: always
+    command: sh ./start_web.sh
+    environment:
+      APP_ENV: production
+    env_file:
+      - .env
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.zrosty_hay_landing.rule=Host(`home.zrosty-hay.simple2b.net`)'
+      - 'traefik.http.routers.zrosty_hay_landing.tls=true'
+      - 'traefik.http.routers.zrosty_hay_landing.tls.certresolver=myresolver'

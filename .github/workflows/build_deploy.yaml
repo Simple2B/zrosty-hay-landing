@@ -8,7 +8,7 @@ on:
 env:
   DOCKER_LOGIN: simple2b
   IMAGE_NAME: simple2b/zrosty-hay-landing
-  DEPLOY_HOST: ${{ secrets.SSH_HOST_IP_PROD }}
+  DEPLOY_HOST: ${{ secrets.SSH_HOST }}
   DEPLOY_USER_NAME: ${{ secrets.SSH_USER }}
   DEPLOY_SSH_KEY: ${{ secrets.SSH_KEY }}
   DEPLOY_SSH_PORT: ${{ secrets.SSH_PORT }}
@@ -16,7 +16,7 @@ env:
 
 jobs:
   on-develop-branch-check:
-    runs-on: Linux
+    runs-on: s2b
     outputs:
       on_develop: ${{ steps.contains_tag.outputs.retval }}
     steps:
@@ -31,7 +31,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: Linux
+    runs-on: s2b
     steps:
       - uses: actions/checkout@v3
         with:
@@ -48,11 +48,11 @@ jobs:
         working-directory: .
         run: |
           poetry install
-      - name: Lint with flake8
+      - name: Lint with ruff
         working-directory: .
         run: |
-          poetry run flake8 . --count --show-source --statistics
-          poetry run flake8 . --count --exit-zero --max-complexity=10 --statistics
+          poetry run ruff check .
+          poetry run ruff format --check .
       - name: Run mypy
         working-directory: .
         run: |
@@ -60,7 +60,7 @@ jobs:
 
   build:
     name: Build and Push
-    runs-on: Linux
+    runs-on: s2b
     needs: test
     steps:
       - name: Checkout
@@ -98,7 +98,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
   deploy:
     name: Deploy to staging
-    runs-on: Linux
+    runs-on: s2b
     needs:
       - on-develop-branch-check
       - build
@@ -113,7 +113,7 @@ jobs:
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           source: docker-compose.staging.yaml
-          target: ~/app
+          target: ~/zrosty-hay-landing
       - name: deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -122,7 +122,7 @@ jobs:
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           script: |
-            cd ~/app &&
+            cd ~/zrosty-hay-landing &&
             mv docker-compose.staging.yaml docker-compose.yaml &&
             docker compose pull &&
             docker compose up -d &&
