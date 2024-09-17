@@ -113,7 +113,7 @@ jobs:
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           source: docker-compose.staging.yaml
-          target: ~/app
+          target: ~/zrosty-hay-landing
       - name: deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -122,7 +122,7 @@ jobs:
           key: ${{ env.DEPLOY_SSH_KEY }}
           port: ${{ env.DEPLOY_SSH_PORT }}
           script: |
-            cd ~/app &&
+            cd ~/zrosty-hay-landing &&
             mv docker-compose.staging.yaml docker-compose.yaml &&
             docker compose pull &&
             docker compose up -d &&
