@@ -1,0 +1,26 @@
+<section
+  class="flex flex-col gap-10 items-center mt-24 bg-custom-gradient ellipse">
+  <img
+    src="{{ url_for('static', filename='img/horizontal-phone.png') }}"
+    alt=""
+    class="w-2/4" />
+  <div class="flex flex-col pb-12 gap-4">
+    <div class="flex">
+      <img
+        src="{{url_for('static',filename='img/logo.png')}}"
+        class="h-8 mr-3"
+        alt="Zrosty Hay logo" />
+      <span
+        class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white font-nunito"
+        >Зрости
+        <span
+          class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-lightGreen font-nunito">
+          Гай
+        </span>
+      </span>
+    </div>
+    <span class="text-xs text-lightTextGrey text-center"
+      >© Copyright 2024
+    </span>
+  </div>
+</section>
