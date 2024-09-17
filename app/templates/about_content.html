@@ -1,0 +1,40 @@
+<section class="flex w-full flex-1 pr-16 bg-custom-gradient">
+  <div class="flex-1">
+    <img
+      src="{{ url_for('static', filename='img/phone-about.png') }}"
+      alt=""
+      class="w-full" />
+  </div>
+  <div class="flex-1 gap-10 flex flex-col justify-evenly text-lightTextGrey">
+    <h1 class="text-5xl font-semibold leading-58">Про застосунок</h1>
+    <h3 class="text-xl">
+      Зрости Гай - це ваш надійний супtутник у догляді за рослинами. Наш додаток
+      надає вам доступ до енциклопедії рослин, де ви можете легко знайти
+      необхідну інформацію про догляд, харчування та характеристики ваших
+      улюбленців
+    </h3>
+    <div class="flex flex-col gap-6">
+      <div class="flex gap-6">
+        <img
+          src="{{ url_for('static', filename='img/search.svg') }}"
+          alt=""
+          class="h-6 w-6 mr-2" />
+        Легка навігація по алфавіту та категоріям рослин
+      </div>
+      <div class="flex gap-6">
+        <img
+          src="{{ url_for('static', filename='img/book.svg') }}"
+          alt=""
+          class="h-6 w-6 mr-2" />
+        Докладні інструкції з догляду за кожним видом
+      </div>
+      <div class="flex gap-6">
+        <img
+          src="{{ url_for('static', filename='img/food.svg') }}"
+          alt=""
+          class="h-6 w-6 mr-2" />
+        Cмачні рецепти з використанням рослини
+      </div>
+    </div>
+  </div>
+</section>

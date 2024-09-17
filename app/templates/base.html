@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{{ config.APP_NAME }}</title>
+    <title>Zrosty Hay</title>
     <!-- meta -->
-    <meta name="description" content="Simple2B Flask App" />
+    <meta name="description" content="Zrosty Hay Landing" />
     <meta name="author" content="Simple2B" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script src="{{ url_for('static', filename='js/lib/htmx.min.js') }}" type="text/javascript" defer></script>
@@ -14,7 +14,18 @@
 
     <!-- styles -->
     <!-- prettier-ignore -->
+     <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    <link rel="icon" href="{{ url_for('static', filename='img/filled_logo.png') }}" type="image/png" />
+
     <!-- prettier-ignore -->
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -36,7 +47,13 @@
   <body hx-ext="response-targets" class="bg-white dark:bg-gray-800">
     <!-- Header -->
     <!-- prettier-ignore -->
+
     {% include 'header.html' %}
+
+    {% include 'header_content.html' %}
+    {% include 'about_content.html' %}
+    {% include 'join_content.html' %}
+    {% include 'footer.html' %}
     <!-- Flash Messages -->
     <!-- prettier-ignore -->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -50,25 +67,18 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
-    
+
     {% block body %}
-    
-    <!-- SideBar -->
-    <!-- prettier-ignore -->
-    {% include 'sidebar.html' %}
-    
-    <div class="sm:ml-64 mt-14 h-full overflow-x-scroll">
-      <!-- Main Content -->
-      {% block content %}{% endblock %}
-    </div>
+
+
     {% endblock %}
     <!-- scripts -->
-    
+
     <!-- prettier-ignore -->
-    
+
   </div>
   <script src="{{ url_for('static', filename='js/base.js') }}" type="text/javascript" defer></script>
-  
+
   <div id="not-found"></div>
   {% include 'spinner.html' %}
 
