@@ -1217,6 +1217,10 @@ input:checked + .toggle-bg {
   width: 2.5rem;
 }
 
+.w-2\/4 {
+  width: 50%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -1241,16 +1245,8 @@ input:checked + .toggle-bg {
   width: 2rem;
 }
 
-.w-\[2\/4\] {
-  width: 2/4;
-}
-
 .w-full {
   width: 100%;
-}
-
-.w-2\/4 {
-  width: 50%;
 }
 
 .max-w-xs {
