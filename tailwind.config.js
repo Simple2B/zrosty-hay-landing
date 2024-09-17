@@ -21,6 +21,14 @@ module.exports = {
       'custom-gradient':
         'linear-gradient(180deg, #2F5233 0%, #3B6041 36.65%, #568162 84.5%, #6C9B7C 100%)',
     },
+    extend: {
+      lineHeight: {
+        58: '58px',
+      },
+      width: {
+        700: '700px',
+      },
+    },
   },
   plugins: [require('flowbite/plugin')],
 };

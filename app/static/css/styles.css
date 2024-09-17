@@ -1233,20 +1233,24 @@ input:checked + .toggle-bg {
   width: 16rem;
 }
 
+.w-700 {
+  width: 700px;
+}
+
 .w-8 {
   width: 2rem;
 }
 
-.w-\[41rem\] {
-  width: 41rem;
-}
-
-.w-\[50\%\] {
-  width: 50%;
+.w-\[2\/4\] {
+  width: 2/4;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-2\/4 {
+  width: 50%;
 }
 
 .max-w-xs {
@@ -1597,10 +1601,6 @@ input:checked + .toggle-bg {
   padding-top: 0.5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1654,16 +1654,16 @@ input:checked + .toggle-bg {
   font-weight: 600;
 }
 
+.leading-58 {
+  line-height: 58px;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
 
 .leading-9 {
   line-height: 2.25rem;
-}
-
-.leading-\[58px\] {
-  line-height: 58px;
 }
 
 .text-blue-600 {
