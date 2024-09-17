@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&display=swap');
 
 .text-danger {
-    color: red;
+  color: red;
 }
 
-.htmx-indicator{
-    display: none;
+.htmx-indicator {
+  display: none;
 }
-.htmx-request .htmx-indicator{
-    display:inline;
+.htmx-request .htmx-indicator {
+  display: inline;
 }
-.htmx-request.htmx-indicator{
-    display:inline;
+.htmx-request.htmx-indicator {
+  display: inline;
+}
+
+.ellipse {
+  width: 100%;
+  min-height: 30rem;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  overflow: hidden;
 }
