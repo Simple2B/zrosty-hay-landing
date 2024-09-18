@@ -13,6 +13,7 @@ def create_app(environment="development"):
     from config import config
     from app.views import (
         main_blueprint,
+        privacy_policy_blueprint,
     )
 
     # Instantiate app.
@@ -28,6 +29,8 @@ def create_app(environment="development"):
 
     # Register blueprints.
     app.register_blueprint(main_blueprint)
+    app.register_blueprint(privacy_policy_blueprint)
+
 
     # Error handlers.
     @app.errorhandler(HTTPException)
