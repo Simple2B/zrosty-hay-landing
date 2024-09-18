@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <title>Zrosty Hay</title>
     <!-- meta -->
@@ -14,13 +14,16 @@
 
     <!-- styles -->
     <!-- prettier-ignore -->
-     <!--fonts-->
+    <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&display=swap"
+      rel="stylesheet">
 
 
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
@@ -30,13 +33,13 @@
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
-        localStorage.getItem("color-theme") === "dark" ||
+        localStorage.getItem("color-theme") === "light" ||
         (!("color-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
+          window.matchMedia("(prefers-color-scheme: light)").matches)
       ) {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add("light");
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove("light");
       }
     </script>
     <!-- prettier-ignore -->
