@@ -31,7 +31,6 @@ def create_app(environment="development"):
     app.register_blueprint(main_blueprint)
     app.register_blueprint(privacy_policy_blueprint)
 
-
     # Error handlers.
     @app.errorhandler(HTTPException)
     def handle_http_error(exc):
