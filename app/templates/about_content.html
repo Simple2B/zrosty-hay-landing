@@ -1,12 +1,16 @@
-<section class="flex w-full flex-1 pr-16 bg-custom-gradient">
+<section
+  class="flex w-full flex-1 md:pr-16 bg-custom-gradient md:flex-row flex-col-reverse md:py-0 py-20">
   <div class="flex-1">
     <img
       src="{{ url_for('static', filename='img/phone-about.png') }}"
       alt=""
       class="w-full" />
   </div>
-  <div class="flex-1 gap-10 flex flex-col justify-evenly text-lightTextGrey">
-    <h1 class="text-5xl font-semibold leading-58">Про застосунок</h1>
+  <div
+    class="flex-1 gap-10 flex flex-col px-4 justify-evenly text-lightTextGrey">
+    <h1 class="text-4xl md:text-5xl font-semibold leading-58">
+      Про застосунок
+    </h1>
     <h3 class="text-xl">
       Зрости Гай - це ваш надійний супtутник у догляді за рослинами. Наш додаток
       надає вам доступ до енциклопедії рослин, де ви можете легко знайти

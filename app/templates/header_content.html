@@ -1,36 +1,37 @@
-<section class="flex w-full flex-1 px-16">
+<section
+  class="flex w-full flex-1 md:px-16 px-4 md:flex-row flex-col md:pt-0 pt-20">
   <div class="flex-1 gap-10 flex flex-col justify-evenly text-darkTextGrey">
-    <h1 class="text-5xl font-semibold leading-58">
+    <h1 class="text-4xl md:text-5xl font-semibold md:leading-58 leading-10">
       Зрости Гай - ідеальний помічник у світі рослин
     </h1>
     <p class="text-xl">
       Отримуйте експертну інформацію про рослини та догляд за ними
     </p>
-    <div class="flex w-full justify-evenly">
+    <div class="flex w-full justify-evenly md:flex-row flex-col gap-3">
       <a
         href="#"
-        class="bg-darkGreen text-white px-4 py-3 rounded-full font-play flex-nowrap flex">
+        class="bg-darkGreen text-white px-4 py-3 rounded-full font-play flex-nowrap flex justify-center text-sm">
         <img
           src="{{ url_for('static', filename='img/appstore.svg') }}"
           alt="App store Icon"
-          class="h-6 w-6 mr-2" />
+          class="md:h-6 md:w-6 h-5 w-5 mr-2" />
         Скачати в Apple Store
       </a>
       <a
         href="#"
-        class="bg-darkGreen text-white px-4 py-3 rounded-full font-play flex-nowrap flex">
+        class="bg-darkGreen text-white px-4 py-3 rounded-full font-play flex-nowrap flex justify-center text-sm">
         <img
           src="{{ url_for('static', filename='img/googleplay.svg') }}"
           alt="Google Play Icon"
-          class="h-6 w-6 mr-2" />
+          class="md:h-6 md:w-6 h-5 w-5 mr-2" />
         Скачати в Google Play
       </a>
     </div>
   </div>
-  <div class="flex-1 self-end">
+  <div class="md:mr-0 -ml-[25%]">
     <img
       src="{{ url_for('static', filename='img/phone-main.png') }}"
       alt=""
-      class="w-full" />
+      class="w-full flex-1 self-end" />
   </div>
 </section>
