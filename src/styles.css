@@ -20,7 +20,6 @@
 }
 
 .ellipse {
-  min-height: 30rem;
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   overflow: hidden;
